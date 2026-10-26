@@ -6,3 +6,7 @@
 - virtual_memory() returns lots of values, using .percent after the brackets picks one the percentage value
 - Learned functions: def, return, and calling with ()
 - Learnt that tracebacks are to be read from the bottom up
+
+## 26 Oct
+- Pushed repo to github on PC
+- Pulled repo from github to Mac and made a new .venv

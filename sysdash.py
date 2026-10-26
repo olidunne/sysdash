@@ -9,4 +9,3 @@ def get_ram():
     return ram_usage
 
 print(f"CPU usage: {get_cpu()}%")
-print(f"RAM usage: {get_ram()}%")
