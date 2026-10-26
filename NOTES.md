@@ -10,3 +10,4 @@
 ## 26 Oct
 - Pushed repo to github on PC
 - Pulled repo from github to Mac and made a new .venv
+- Added CPU Temperature 
