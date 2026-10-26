@@ -26,6 +26,14 @@ def get_disk():
     disk_used = psutil.disk_usage("/")
     return disk_used
 
+def get_colour(value, danger, warning):
+    if value > danger:
+        return COLOUR_RED
+    elif value > warning:
+        return COLOUR_YELLOW
+    else:
+        return COLOUR_GREEN
+
 try:
     while True:
         cpu_usage = get_cpu_usage()
@@ -38,12 +46,11 @@ try:
         disk_used = bytes_to_gb(disk.used)
         disk_total = bytes_to_gb(disk.total)
         disk_percent = (disk.percent)
-
         os.system("clear")
         print("SYSDASH")
         print()
         print(f"{'CPU Usage:':<{LABEL_WIDTH}} {cpu_usage}%")
-        print(f"{'CPU Temperature:':<{LABEL_WIDTH}} {cpu_temp:.1f}°C")
+        print(f"{'CPU Temperature:':<{LABEL_WIDTH}} {get_colour(cpu_temp, 80, 70)}{cpu_temp:.1f}°C{COLOUR_RESET}")
         print(f"{'RAM Usage:':<{LABEL_WIDTH}} {ram_used:.1f} / {ram_total:.1f} GB ({ram_percent:.1f}%)")
         print(f"{'Disk Usage:':<{LABEL_WIDTH}} {disk_used:.1f} / {disk_total:.1f} GB ({disk_percent:.1f}%)")
         print()
