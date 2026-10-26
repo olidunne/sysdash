@@ -27,3 +27,4 @@
 - Applied the colour coding to the other percentages
 - Rearanged the print lines so that the percentage always comes first
 - Set the percentage warning and danger values as constants
+- Renamed bytes to num_bytes to avoid clashes with pythons default bytes() function

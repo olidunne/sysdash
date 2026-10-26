@@ -2,10 +2,12 @@ import psutil
 import os
 
 LABEL_WIDTH = 20
+
 COLOUR_RED = "\033[31m"
 COLOUR_YELLOW = "\033[33m"
 COLOUR_GREEN = "\033[32m"
 COLOUR_RESET = "\033[0m"
+
 CPU_USAGE_DANGER = 90
 CPU_USAGE_WARNING = 70
 CPU_TEMP_DANGER = 80
@@ -15,8 +17,8 @@ RAM_WARNING = 75
 DISK_DANGER = 90
 DISK_WARNING = 80
 
-def bytes_to_gb(bytes):
-    return bytes / 1024**3
+def bytes_to_gb(num_bytes):
+    return num_bytes / 1024**3
 
 def get_cpu_usage():
     cpu_usage = psutil.cpu_percent(interval=1)
@@ -50,10 +52,10 @@ try:
         disk = get_disk()
         ram_used = bytes_to_gb(ram.used)
         ram_total = bytes_to_gb(ram.total)
-        ram_percent = (ram.percent)
+        ram_percent = ram.percent
         disk_used = bytes_to_gb(disk.used)
         disk_total = bytes_to_gb(disk.total)
-        disk_percent = (disk.percent)
+        disk_percent = disk.percent
         os.system("clear")
         print("SYSDASH")
         print()
