@@ -1,4 +1,5 @@
 import psutil
+import os
 
 def get_cpu():
     cpu_usage = psutil.cpu_percent(interval=1)
@@ -16,7 +17,13 @@ def get_disk_percent():
     disk_percent_used = psutil.disk_usage("/").percent
     return disk_percent_used
 
-print(f"CPU Usage: {get_cpu()}%")
-print(f"RAM Usage: {get_ram()}%")
-print(f"CPU Temperature: {get_cpu_temp():.1f}°C")
-print(f"Disk % Used: {get_disk_percent():.1f}%")
+while True:
+    cpu = get_cpu()
+    ram = get_ram()
+    cpu_temp = get_cpu_temp()
+    disk_percent = get_disk_percent()
+    os.system("clear")
+    print(f"CPU Usage: {cpu}%")
+    print(f"RAM Usage: {ram}%")
+    print(f"CPU Temperature: {cpu_temp:.1f}°C")
+    print(f"Disk % Used: {disk_percent:.1f}%")

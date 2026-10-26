@@ -12,3 +12,6 @@
 - Pulled repo from github to Mac and made a new .venv
 - Added get_cpu_temp()
 - Added get_disk_percent()
+- Added "os" to allow the script to talk to the operating system
+- Used a while loop so that the status of each component keeps updating
+- Created new variables for each statistic at the start of the while loop to fix flashing when the monitor refreshes
