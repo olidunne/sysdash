@@ -1,3 +1,4 @@
+import psutil
 import tkinter as tk
 
 window = tk.Tk()
@@ -9,4 +10,7 @@ label_cpu_temp = tk.Label(window, text="CPU Temperature: --")
 
 label_cpu_usage.pack()
 label_cpu_temp.pack()
+
+label_cpu_usage.config(text="CPU Usage 5%")
+
 window.mainloop()
