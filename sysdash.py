@@ -28,20 +28,20 @@ try:
         cpu_temp = get_cpu_temp()
         ram = get_ram()
         disk = get_disk()
-        ram_used = f"{bytes_to_gb(ram.used):.1f}"
-        ram_total = f"{bytes_to_gb(ram.total):.1f}"
-        ram_percent = f"{(ram.percent):.1f}"
-        disk_used = f"{bytes_to_gb(disk.used):.2f}"
-        disk_total = f"{bytes_to_gb(disk.total):.2f}"
-        disk_percent = f"{(disk.percent):.1f}"
+        ram_used = bytes_to_gb(ram.used)
+        ram_total = bytes_to_gb(ram.total)
+        ram_percent = (ram.percent)
+        disk_used = bytes_to_gb(disk.used)
+        disk_total = bytes_to_gb(disk.total)
+        disk_percent = (disk.percent)
 
         os.system("clear")
         print("SYSDASH")
         print()
         print(f"{'CPU Usage:':<{LABEL_WIDTH}} {cpu_usage}%")
         print(f"{'CPU Temperature:':<{LABEL_WIDTH}} {cpu_temp:.1f}°C")
-        print(f"{'RAM Usage:':<{LABEL_WIDTH}} {ram_used} / {ram_total} GB ({ram_percent}%)")
-        print(f"{'Disk Usage:':<{LABEL_WIDTH}} {disk_used} / {disk_total} GB ({disk_percent}%)")
+        print(f"{'RAM Usage:':<{LABEL_WIDTH}} {ram_used:.1f} / {ram_total:.1f} GB ({ram_percent:.1f}%)")
+        print(f"{'Disk Usage:':<{LABEL_WIDTH}} {disk_used:.1f} / {disk_total:.1f} GB ({disk_percent:.1f}%)")
         print()
         print("PRESS CTRL+C TO QUIT")
 except KeyboardInterrupt:
