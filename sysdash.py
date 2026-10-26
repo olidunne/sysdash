@@ -2,6 +2,10 @@ import psutil
 import os
 
 LABEL_WIDTH = 20
+COLOUR_RED = "\033[31m"
+COLOUR_YELLOW = "\033[33m"
+COLOUR_GREEN = "\033[32m"
+COLOUR_RESET = "\033[0m"
 
 def bytes_to_gb(bytes):
     return bytes / 1024**3

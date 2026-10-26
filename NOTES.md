@@ -22,3 +22,4 @@
 - Added a function that converts bytes to Gigabytes
 - Added ram and disk .used and .total
 - Cleaned up functions and variables to make the code more readable and so that get_ram() and get_disk() only need to be called once per loop
+- Added text colour variables for red, yellow, green, and reset.
