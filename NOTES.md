@@ -16,3 +16,5 @@
 - Used a while loop so that the status of each component keeps updating
 - Created new variables for each statistic at the start of the while loop to fix flashing when the monitor refreshes
 - Placed the while loop within "try:" to make the proccess end cleanly when using Ctl+C
+- Added README.md
+- Added a title and intructions to close within the program
