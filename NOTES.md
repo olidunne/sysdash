@@ -20,3 +20,5 @@
 - Added a title and instructions to close within the program
 - Added :<20 to each print line using the variable LABEL_WIDTH for equal spacing
 - Added a function that converts bytes to Gigabytes
+- Added ram and disk .used and .total
+- Cleaned up functions and variables to make the code more readable and so that get_ram() and get_disk() only need to be called once per loop
