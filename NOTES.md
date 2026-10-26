@@ -25,3 +25,5 @@
 - Added text colour variables for red, yellow, green, and reset.
 - Added a colour coding system for warning and danger (get_colour) and applied it with cpu_temp
 - Applied the colour coding to the other percentages
+- Rearanged the print lines so that the percentage always comes first
+- Set the percentage warning and danger values as constants

@@ -6,6 +6,14 @@ COLOUR_RED = "\033[31m"
 COLOUR_YELLOW = "\033[33m"
 COLOUR_GREEN = "\033[32m"
 COLOUR_RESET = "\033[0m"
+CPU_USAGE_DANGER = 90
+CPU_USAGE_WARNING = 70
+CPU_TEMP_DANGER = 80
+CPU_TEMP_WARNING = 70
+RAM_DANGER = 90
+RAM_WARNING = 75
+DISK_DANGER = 90
+DISK_WARNING = 80
 
 def bytes_to_gb(bytes):
     return bytes / 1024**3
@@ -49,10 +57,10 @@ try:
         os.system("clear")
         print("SYSDASH")
         print()
-        print(f"{'CPU Usage:':<{LABEL_WIDTH}} {get_colour(cpu_usage, 70, 90)}{cpu_usage}%{COLOUR_RESET}")
-        print(f"{'CPU Temperature:':<{LABEL_WIDTH}} {get_colour(cpu_temp, 80, 70)}{cpu_temp:.1f}°C{COLOUR_RESET}")
-        print(f"{'RAM Usage:':<{LABEL_WIDTH}} {ram_used:.1f} / {ram_total:.1f} GB ({get_colour(ram_percent, 75, 90)}{ram_percent:.1f}%{COLOUR_RESET})")
-        print(f"{'Disk Usage:':<{LABEL_WIDTH}} {disk_used:.1f} / {disk_total:.1f} GB ({get_colour(disk_percent, 80, 90)}{disk_percent:.1f}%{COLOUR_RESET})")
+        print(f"{'CPU Usage:':<{LABEL_WIDTH}} {get_colour(cpu_usage, CPU_USAGE_DANGER, CPU_USAGE_WARNING)}{cpu_usage}%{COLOUR_RESET}")
+        print(f"{'CPU Temperature:':<{LABEL_WIDTH}} {get_colour(cpu_temp, CPU_TEMP_DANGER, CPU_TEMP_WARNING)}{cpu_temp:.1f}°C{COLOUR_RESET}")
+        print(f"{'RAM Usage:':<{LABEL_WIDTH}} {get_colour(ram_percent, RAM_DANGER, RAM_WARNING)}{ram_percent:.1f}%{COLOUR_RESET} ({ram_used:.1f} / {ram_total:.1f} GB)")
+        print(f"{'Disk Usage:':<{LABEL_WIDTH}} {get_colour(disk_percent, DISK_DANGER, DISK_WARNING)}{disk_percent:.1f}%{COLOUR_RESET} ({disk_used:.1f} / {disk_total:.1f} GB)")
         print()
         print("PRESS CTRL+C TO QUIT")
 except KeyboardInterrupt:
