@@ -3,6 +3,9 @@ import os
 
 LABEL_WIDTH = 20
 
+def bytes_to_gb(bytes):
+    return bytes / 1024**3
+
 def get_cpu():
     cpu_usage = psutil.cpu_percent(interval=1)
     return cpu_usage

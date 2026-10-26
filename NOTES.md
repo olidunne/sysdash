@@ -19,3 +19,4 @@
 - Added README.md
 - Added a title and instructions to close within the program
 - Added :<20 to each print line using the variable LABEL_WIDTH for equal spacing
+- Added a function that converts bytes to Gigabytes
