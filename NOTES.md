@@ -24,3 +24,4 @@
 - Cleaned up functions and variables to make the code more readable and so that get_ram() and get_disk() only need to be called once per loop
 - Added text colour variables for red, yellow, green, and reset.
 - Added a colour coding system for warning and danger (get_colour) and applied it with cpu_temp
+- Applied the colour coding to the other percentages
