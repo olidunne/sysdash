@@ -1,6 +1,8 @@
 import psutil
 import os
 
+LABEL_WIDTH = 20
+
 def get_cpu():
     cpu_usage = psutil.cpu_percent(interval=1)
     return cpu_usage
@@ -26,10 +28,10 @@ try:
         os.system("clear")
         print("SYSDASH")
         print()
-        print(f"CPU Usage: {cpu}%")
-        print(f"RAM Usage: {ram}%")
-        print(f"CPU Temperature: {cpu_temp:.1f}°C")
-        print(f"Disk Usage: {disk_percent:.1f}%")
+        print(f"{'CPU Usage:':<{LABEL_WIDTH}} {cpu}%")
+        print(f"{'RAM Usage:':<{LABEL_WIDTH}} {ram}%")
+        print(f"{'CPU Temperature:':<{LABEL_WIDTH}} {cpu_temp:.1f}°C")
+        print(f"{'Disk Usage:':<{LABEL_WIDTH}} {disk_percent:.1f}%")
         print()
         print("PRESS CTRL+C TO QUIT")
 except KeyboardInterrupt:

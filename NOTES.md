@@ -9,12 +9,13 @@
 
 ## 26 Oct
 - Pushed repo to github on PC
-- Pulled repo from github to Mac and made a new .venv
+- Cloned repo from github to Mac and made a new .venv
 - Added get_cpu_temp()
 - Added get_disk_percent()
 - Added "os" to allow the script to talk to the operating system
 - Used a while loop so that the status of each component keeps updating
 - Created new variables for each statistic at the start of the while loop to fix flashing when the monitor refreshes
-- Placed the while loop within "try:" to make the proccess end cleanly when using Ctl+C
+- Placed the while loop within "try:" to make the process end cleanly when using Ctrl+C
 - Added README.md
-- Added a title and intructions to close within the program
+- Added a title and instructions to close within the program
+- Added :<20 to each print line using the variable LABEL_WIDTH for equal spacing
