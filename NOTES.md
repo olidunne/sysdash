@@ -10,4 +10,5 @@
 ## 26 Oct
 - Pushed repo to github on PC
 - Pulled repo from github to Mac and made a new .venv
-- Added CPU Temperature 
+- Added get_cpu_temp()
+- Added get_disk_percent()
