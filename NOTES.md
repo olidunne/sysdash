@@ -46,3 +46,5 @@
 - Made disk and ram labels update live in gui
 - Switched pack() to grid()
 - Added a version of get_colour to gui.py and made it function on the labels with fg=
+- Fixed value > warning returning the wrong variable name in gui.py
+- Fixed label_disk_usage.config using CPU_USAGE_DANGER threshold

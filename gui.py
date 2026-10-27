@@ -13,7 +13,7 @@ def get_colour(value, danger, warning):
     if value > danger:
         return COLOUR_RED
     elif value > warning:
-        return COLOUR_YELLOW
+        return COLOUR_ORANGE
     else:
         return COLOUR_GREEN
 
@@ -45,7 +45,7 @@ def update():
     ram_used, ram_total, ram_percent = stats.get_ram_stats()
     label_ram_usage.config(text=f"{ram_percent}% ({ram_used:.1f} / {ram_total:.1f} GB)", fg=get_colour(ram_percent, stats.RAM_DANGER, stats.RAM_WARNING))
     disk_used, disk_total, disk_percent = stats.get_disk_stats()
-    label_disk_usage.config(text=f"{disk_percent}% ({disk_used:.1f} / {disk_total:.1f} GB)", fg=get_colour(disk_percent, stats.CPU_USAGE_DANGER, stats.DISK_WARNING))
+    label_disk_usage.config(text=f"{disk_percent}% ({disk_used:.1f} / {disk_total:.1f} GB)", fg=get_colour(disk_percent, stats.DISK_DANGER, stats.DISK_WARNING))
     window.after(1000, update)
 
 update()
