@@ -44,3 +44,4 @@
 - Made cpu usage and temperature lables update live in gui
 - Moved the definitions of disk and ram used, total, and percent into stats.py
 - Made disk and ram labels update live in gui
+- Switched pack() to grid()
