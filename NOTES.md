@@ -28,15 +28,14 @@
 - Rearanged the print lines so that the percentage always comes first
 - Set the percentage warning and danger values as constants
 - Renamed bytes to num_bytes to avoid clashes with pythons default bytes() function
-
-## 26 Oct (GUI branch)
 - Made a seperate branch to get started on the GUI
 - Imported tkinter as tk
 - Created a window
 - Created labels for cpu usage and cpu temp and used .pack() to place them
 - Started a .mainloop() to hand control to the window
 
-# 27 Oct (split-files branch)
+# 27 Oct
 - Merged main and gui
 - Made a new branch called split-files to start reorganising the code into seperate files to prevent having to rewrite the code from sysdash.py into gui.py
 - Added import stats on sysdash.py and placed stats. before the use of every function thats definition has been moved to stats.py
+- Merged main and split-files
