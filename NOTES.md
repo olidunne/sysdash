@@ -45,3 +45,4 @@
 - Moved the definitions of disk and ram used, total, and percent into stats.py
 - Made disk and ram labels update live in gui
 - Switched pack() to grid()
+- Added a version of get_colour to gui.py and made it function on the labels with fg=
