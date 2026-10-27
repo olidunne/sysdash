@@ -21,14 +21,8 @@ try:
     while True:
         cpu_usage = stats.get_cpu_usage()
         cpu_temp = stats.get_cpu_temp()
-        ram = stats.get_ram()
-        disk = stats.get_disk()
-        ram_used = stats.bytes_to_gb(ram.used)
-        ram_total = stats.bytes_to_gb(ram.total)
-        ram_percent = ram.percent
-        disk_used = stats.bytes_to_gb(disk.used)
-        disk_total = stats.bytes_to_gb(disk.total)
-        disk_percent = disk.percent
+        ram_used, ram_total, ram_percent = stats.get_ram_stats()
+        disk_used, disk_total, disk_percent = stats.get_disk_stats()
         os.system("clear")
         print("SYSDASH")
         print()
