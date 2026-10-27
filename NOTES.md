@@ -35,3 +35,8 @@
 - Created a window
 - Created labels for cpu usage and cpu temp and used .pack() to place them
 - Started a .mainloop() to hand control to the window
+
+# 27 Oct (split-files branch)
+- Merged main and gui
+- Made a new branch called split-files to start reorganising the code into seperate files to prevent having to rewrite the code from sysdash.py into gui.py
+- Added import stats on sysdash.py and placed stats. before the use of every function thats definition has been moved to stats.py
