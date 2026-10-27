@@ -39,3 +39,5 @@
 - Made a new branch called split-files to start reorganising the code into seperate files to prevent having to rewrite the code from sysdash.py into gui.py
 - Added import stats on sysdash.py and placed stats. before the use of every function thats definition has been moved to stats.py
 - Merged main and split-files
+- Started gui-live branch
+- Added interval option to get_cpu_usage

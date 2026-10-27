@@ -12,8 +12,8 @@ DISK_WARNING = 80
 def bytes_to_gb(num_bytes):
     return num_bytes / 1024**3
 
-def get_cpu_usage():
-    cpu_usage = psutil.cpu_percent(interval=1)
+def get_cpu_usage(interval=1):
+    cpu_usage = psutil.cpu_percent(interval=interval)
     return cpu_usage
 
 def get_cpu_temp():
