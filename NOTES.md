@@ -41,3 +41,4 @@
 - Merged main and split-files
 - Started gui-live branch
 - Added interval option to get_cpu_usage
+- Made cpu usage and temperature lables update live in gui
