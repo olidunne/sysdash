@@ -48,3 +48,6 @@
 - Added a version of get_colour to gui.py and made it function on the labels with fg=
 - Fixed value > warning returning the wrong variable name in gui.py
 - Fixed label_disk_usage.config using CPU_USAGE_DANGER threshold
+
+# 1 Nov
+- Moved RAM and disk GB into a third column

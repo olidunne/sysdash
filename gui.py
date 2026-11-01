@@ -37,15 +37,23 @@ label_cpu_temp.grid(row=1, column=1, sticky="e", padx=10)
 label_ram_usage.grid(row=2, column=1, sticky="e", padx=10)
 label_disk_usage.grid(row=3, column=1, sticky="e", padx=10)
 
+label_ram_usage_gb = tk.Label(window, text="--")
+label_disk_usage_gb = tk.Label(window, text="--")
+
+label_ram_usage_gb.grid(row=2, column=2, sticky="e", padx=10)
+label_disk_usage_gb.grid(row=3, column=2, sticky="e", padx=10)
+
 def update():
     cpu_usage = stats.get_cpu_usage(interval=None)
     label_cpu_usage.config(text=f"{cpu_usage}%", fg=get_colour(cpu_usage, stats.CPU_USAGE_DANGER, stats.CPU_USAGE_WARNING))
     cpu_temp = stats.get_cpu_temp()
     label_cpu_temp.config(text=f"{cpu_temp:.1f}°C", fg=get_colour(cpu_temp, stats.CPU_TEMP_DANGER, stats.CPU_TEMP_WARNING))
     ram_used, ram_total, ram_percent = stats.get_ram_stats()
-    label_ram_usage.config(text=f"{ram_percent}% ({ram_used:.1f} / {ram_total:.1f} GB)", fg=get_colour(ram_percent, stats.RAM_DANGER, stats.RAM_WARNING))
+    label_ram_usage.config(text=f"{ram_percent}%", fg=get_colour(ram_percent, stats.RAM_DANGER, stats.RAM_WARNING))
+    label_ram_usage_gb.config(text=f"({ram_used:.1f} / {ram_total:.1f} GB)")
     disk_used, disk_total, disk_percent = stats.get_disk_stats()
-    label_disk_usage.config(text=f"{disk_percent}% ({disk_used:.1f} / {disk_total:.1f} GB)", fg=get_colour(disk_percent, stats.DISK_DANGER, stats.DISK_WARNING))
+    label_disk_usage.config(text=f"{disk_percent}%", fg=get_colour(disk_percent, stats.DISK_DANGER, stats.DISK_WARNING))
+    label_disk_usage_gb.config(text=f"({disk_used:.1f} / {disk_total:.1f} GB)")
     window.after(1000, update)
 
 update()
