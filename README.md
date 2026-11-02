@@ -7,6 +7,7 @@
 - Disk usage
 
 ![Screenshot](screenshot.png)
+![Screenshot](gui_screenshot.png)
 
 ## Current requirements:
 - Linux
